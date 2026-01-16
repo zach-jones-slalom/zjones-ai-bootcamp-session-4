@@ -59,23 +59,23 @@ app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
 
 # In-memory user database (in production, use a real database)
 # Password: "password123" for all demo users
-# Pre-computed bcrypt hashes to avoid module load issues
+# Using bcrypt hash for "password123": $2b$12$tmRSPV/3aRDym4jvbbpBx.UVsgbaXJ4JydrlBieNEWu0VOzjnGusK
 users = {
     "alice.smith@slalom.com": {
         "email": "alice.smith@slalom.com",
-        "hashed_password": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYqHFr6z.Ii",
+        "hashed_password": "$2b$12$tmRSPV/3aRDym4jvbbpBx.UVsgbaXJ4JydrlBieNEWu0VOzjnGusK",
         "role": "admin",
         "name": "Alice Smith"
     },
     "bob.johnson@slalom.com": {
         "email": "bob.johnson@slalom.com",
-        "hashed_password": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYqHFr6z.Ii",
+        "hashed_password": "$2b$12$tmRSPV/3aRDym4jvbbpBx.UVsgbaXJ4JydrlBieNEWu0VOzjnGusK",
         "role": "consultant",
         "name": "Bob Johnson"
     },
     "emma.davis@slalom.com": {
         "email": "emma.davis@slalom.com",
-        "hashed_password": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYqHFr6z.Ii",
+        "hashed_password": "$2b$12$tmRSPV/3aRDym4jvbbpBx.UVsgbaXJ4JydrlBieNEWu0VOzjnGusK",
         "role": "consultant",
         "name": "Emma Davis"
     }
