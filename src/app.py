@@ -59,22 +59,23 @@ app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
 
 # In-memory user database (in production, use a real database)
 # Password: "password123" for all demo users
+# Pre-computed bcrypt hashes to avoid module load issues
 users = {
     "alice.smith@slalom.com": {
         "email": "alice.smith@slalom.com",
-        "hashed_password": pwd_context.hash("password123"),
+        "hashed_password": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYqHFr6z.Ii",
         "role": "admin",
         "name": "Alice Smith"
     },
     "bob.johnson@slalom.com": {
         "email": "bob.johnson@slalom.com",
-        "hashed_password": pwd_context.hash("password123"),
+        "hashed_password": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYqHFr6z.Ii",
         "role": "consultant",
         "name": "Bob Johnson"
     },
     "emma.davis@slalom.com": {
         "email": "emma.davis@slalom.com",
-        "hashed_password": pwd_context.hash("password123"),
+        "hashed_password": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYqHFr6z.Ii",
         "role": "consultant",
         "name": "Emma Davis"
     }
