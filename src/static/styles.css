@@ -28,9 +28,61 @@ header {
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+#user-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+#user-name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.role-badge {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.role-admin {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.role-consultant {
+  background-color: #4ecdc4;
+  color: white;
+}
+
+.logout-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .mascot {
@@ -71,6 +123,28 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.demo-credentials {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e3f2fd;
+  border-left: 4px solid #0066cc;
+  border-radius: 5px;
+}
+
+.demo-credentials p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.demo-credentials strong {
+  color: #003d7a;
 }
 
 section h3 {
